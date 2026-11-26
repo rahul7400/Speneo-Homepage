@@ -1,0 +1,95 @@
+:root {
+  color-scheme: dark;
+  --background: #0d0b18;
+  --text: #f7f5ff;
+  --muted: #c2bcd8;
+  --accent: #c5b5ff;
+  --border: #302844;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  min-width: 0;
+  margin: 0;
+  color: var(--text);
+  background: radial-gradient(ellipse at top, #201642, var(--background) 42rem);
+}
+
+a { color: var(--accent); text-underline-offset: 0.22em; }
+
+a:hover { color: var(--text); }
+
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+
+.wrap { width: min(68rem, calc(100% - 3rem)); margin-inline: auto; }
+
+.site-header, .site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 1.25rem;
+}
+
+.site-header { border-bottom: 1px solid var(--border); }
+
+.site-header nav, .site-footer nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; }
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--text);
+  font-size: 1.3rem;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.brand img { border-radius: 0.7rem; }
+
+.hero { padding-block: clamp(3.5rem, 11vw, 7rem); }
+
+.product-label { margin: 0 0 1rem; color: var(--accent); font-weight: 650; }
+
+h1, h2 { line-height: 1.1; }
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.65rem, 10vw, 6.75rem);
+  letter-spacing: -0.055em;
+}
+
+.intro {
+  max-width: 33rem;
+  margin: 1.65rem 0 0;
+  color: var(--muted);
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  gap: 1.5rem 2rem;
+  padding-block: 1.75rem 2.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.features h2, .legal h2 { margin: 0 0 0.55rem; font-size: 1.2rem; }
+
+.features p, .legal p { margin: 0; color: var(--muted); }
+
+.site-footer { border-top: 1px solid var(--border); color: var(--muted); }
+
+.legal {
+  max-width: 44rem;
+  padding-block: clamp(2.5rem, 7vw, 5rem);
+  overflow-wrap: anywhere;
+}
+
+.legal h1 { font-size: clamp(2.4rem, 7vw, 4rem); }
+
+.legal section { margin-top: 2rem; }
